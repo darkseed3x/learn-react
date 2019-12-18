@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'fonts';
+@import 'utils';
+
+.header{
+    grid-row: 1/span 1;
+    grid-column: 1/span 2;
+    background-color: $top-bg-color;
+    border-radius: 1rem;
+}
+.logo{
+    text-decoration: none;
+    padding: 20px;
+
+    &__logo-pic{
+        margin-right: 10px;
+    }
+    &__logo-title{
+        margin-top: 4px;
+        margin-left: 4px;
+    }
+}
+.logo-title{
+    margin-bottom: 0;
+    font-family: "RobotoSlab";
+    text-transform: uppercase;
+    letter-spacing: 3.39px;
+
+    &_green{
+        color: $main-green;
+    }
+    &_size_m{
+        font-size: 18px;
+    }
+
+}
