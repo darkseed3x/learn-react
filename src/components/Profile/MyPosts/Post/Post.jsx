@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './Post.module.scss';
 
-const Post = () => {
+const Post = (props) => {
     return (
         <div className={style.post}>
             <div className="avatar"><img src="" alt=""/></div>
-            <div className="text">aaaaaaaaaaaaaaaa</div>
+            <div className="text">{props.message}</div>
         </div>
     );
 }

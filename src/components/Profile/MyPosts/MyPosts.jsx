@@ -8,9 +8,9 @@ const MyPosts = () => {
             <h2 className={style.title}>My Posts</h2>
             <textarea className={style.enter} name="" id=""></textarea>
             <button className={style.button}>send</button>
-            <Post />
-            <Post />
-            <Post />
+            <Post message='aaaaaaaaa'/>
+            <Post message='bbbbbbbbb'/>
+            <Post message='ccccccccc'/>
         </div>
     );
 }
