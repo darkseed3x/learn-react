@@ -1,0 +1,40 @@
+@import './../../variables';
+@import './../../fonts';
+
+.posts{
+    display: flex;
+    flex-direction: column;
+}
+.enter{
+    border-radius: 1rem;
+    margin: 0 20px;
+    border: 1px solid $placeholder-text-color;
+    width: 92%;
+    min-height: 100px;
+    padding: 16px 14px;
+    resize: none;
+    font-size: 19px;
+    font-family: 'Roboto-Light';
+}
+.title{
+    font-family: "RobotoSlab-Thin";
+    margin: 20px;
+}
+.button{
+    margin: 20px 25px 40px 0;
+    align-self: flex-end;
+    height: 56px;
+    width: 200px;
+    border-radius: 1rem;
+    font-family: 'Roboto-Bold'; 
+    border: none;
+    font-size: 22px;
+    background-color: $main-green;
+    color: white;
+
+    &:hover{
+        background-color: $top-bg-color;
+        border: 3px solid $main-green;
+        cursor: pointer;
+    }
+}
