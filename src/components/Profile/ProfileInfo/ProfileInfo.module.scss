@@ -1,0 +1,11 @@
+@import './../../variables';
+@import './../../fonts';
+
+.profile_wrapper{
+    display: flex;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}

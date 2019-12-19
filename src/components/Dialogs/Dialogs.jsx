@@ -2,32 +2,37 @@ import React from 'react';
 import style from './Dialogs.module.scss';
 import {NavLink} from "react-router-dom";
 
-const Dialogs = () =>{
+const DialogItem = (props) => {
+    let path = "/dialogs/" + props.id;
+    return (
+        <div className={style.dialog}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    );
+}
+
+const Message = (props) =>{
     return(
+        <div className={style.message}>{props.message}</div>
+    );
+}
+
+const Dialogs = () => {
+    return (
         <div className={style.dialogs}>
             <h2 className={style.title}>Dialogs</h2>
             <div className={style.items}>
-                <div className={style.dialog}>
-                    <NavLink to="dialogs/1">Michael</NavLink>
-                </div>
-                <div className={style.dialog}>
-                    <NavLink to="dialogs/2">Lars</NavLink>
-                </div>
-                <div className={style.dialog}>
-                    <NavLink to="dialogs/3">Stefan</NavLink>
-                </div>
-                <div className={style.dialog}>
-                    <NavLink to="dialogs/4">Angelika</NavLink>
-                </div>
-                <div className={style.dialog}>
-                    <NavLink to="dialogs/5">Maria</NavLink>
-                </div>
+                <DialogItem name="Michael" id ="1"/>
+                <DialogItem name="Lars" id ="2"/>
+                <DialogItem name="Stefan" id ="3"/>
+                <DialogItem name="Angelika" id ="4"/>
+                <DialogItem name="Maria" id ="5"/>
             </div>
             <div className={style.messages}>
-                <div className={style.message}>aaaaaaa</div>
-                <div className={style.message}>dddddd</div>
-                <div className={style.message}>ffffff</div>
-                <div className={style.message}>gggggggg</div>
+                <Message  message="aaaaaa"/>
+                <Message  message="dddddd"/>
+                <Message  message="ffffff"/>
+                <Message  message="gggggggg"/>
             </div>
         </div>
 
