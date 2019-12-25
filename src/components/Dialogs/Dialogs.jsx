@@ -17,22 +17,19 @@ const Message = (props) =>{
     );
 }
 
-const Dialogs = () => {
+const Dialogs = (props) => {
     return (
         <div className={style.dialogs}>
             <h2 className={style.title}>Dialogs</h2>
             <div className={style.items}>
-                <DialogItem name="Michael" id ="1"/>
-                <DialogItem name="Lars" id ="2"/>
-                <DialogItem name="Stefan" id ="3"/>
-                <DialogItem name="Angelika" id ="4"/>
-                <DialogItem name="Maria" id ="5"/>
+                {
+                    props.dialogs.map(dialog => <DialogItem name={dialog.name} id ={dialog.id}/>)
+                }
             </div>
             <div className={style.messages}>
-                <Message  message="aaaaaa"/>
-                <Message  message="dddddd"/>
-                <Message  message="ffffff"/>
-                <Message  message="gggggggg"/>
+                {
+                    props.messages.map(messageItem => <Message  message={messageItem.message}/>)
+                }
             </div>
         </div>
 
