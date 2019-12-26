@@ -1,0 +1,39 @@
+@import "./../../variables";
+
+.message{
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid $main-green;
+  flex-shrink: 0;
+  align-self: flex-end;
+  background-color: $placeholder-text-color;
+}
+.text{
+  position: relative;
+  padding: 30px;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 0 50px;
+  margin-bottom: 50px;
+  overflow-wrap: break-word;
+}
+.text::before{
+  content: "";
+  position: absolute;
+  clip-path: polygon(22px 22px, 64px 13px, 55px 2px);
+  bottom: -7px;
+  left: -52px;
+  background-color:
+          white;
+  height: 26px;
+  width: 62px;
+}
