@@ -9,7 +9,7 @@ const Profile = (props) => {
     return (
         <main className={style.profile}>
             <ProfileInfo />
-            <MyPosts posts={props.profilePage.posts}/>
+            <MyPosts posts={props.profilePage.posts} addPost ={props.addPost}/>
         </main>
     );
 }
